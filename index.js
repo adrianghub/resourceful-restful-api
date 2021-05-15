@@ -2,7 +2,11 @@ import express from 'express';
 import mongoose from 'mongoose'
 import cors from 'cors'
 
+import postRoutes from './routes/posts.js';
+
 const app = express();
+
+app.use('/posts', postRoutes);
 
 app.use(express.urlencoded({ limit: "25mb", extended: true }));
 app.use(express.json({ limit: "25mb", extended: true }));
