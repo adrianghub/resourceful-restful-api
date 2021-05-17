@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
   res.send('Snippet API');
 })
 
+const PORT = process.env.PORT || 5000;
+
 mongoose
   .connect(process.env.CONNECT_URL, {
     useNewUrlParser: true,
