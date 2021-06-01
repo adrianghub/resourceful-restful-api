@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken';
 
+const secret = 'japko';
+
 const middlewareAuth = async (req, res, next) => {
   try {
     
@@ -9,7 +11,7 @@ const middlewareAuth = async (req, res, next) => {
     let decodedData;
 
     if(token && isCustomAuth) {
-      decodedData = jwt.verify(token, 'japko');
+      decodedData = jwt.verify(token, secret);
 
       req.userId = decodedData?.id;
     } else {
