@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(CONNECT_URL, {
+  .connect("mongodb+srv://adrianghub:adrianghub001@cluster0.ao8mk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
