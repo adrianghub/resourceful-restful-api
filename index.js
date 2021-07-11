@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 import postRoutes from "./routes/posts.js";
 import userRoutes from "./routes/users.js";
