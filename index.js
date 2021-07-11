@@ -17,7 +17,7 @@ app.use("/posts", postRoutes);
 app.use("/users", userRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Snippet API');
+  res.send('Resourceful Blog API');
 })
 
 const PORT = process.env.PORT || 5000;
